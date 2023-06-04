@@ -58,10 +58,10 @@ spec:
             image: ubuntu
             script: |
               #!/usr/bin/env bash
-              echo -n "quay.io/redhat-user-workloads/gbenhaim-tenant/devfile-sample-python-basic-main/python-app:2b4b0daad6d377ad5cf9cdc57c4377c0dab2fcd8" > $(results.IMAGE_URL.path)
-              echo -n "sha256:98667da57e533d49a19f694357bc4538e55ae0aecde973e92f42ec39d8dddddd" > $(results.IMAGE_DIGEST.path)
-              echo -n "https://github.com/gbenhaim/devfile-sample-python-basic" > $(results.url.path)
-              echo -n "2b4b0daad6d377ad5cf9cdc57c4377c0dab2fcd8" > $(results.commit.path)
+              echo -n "quay.io/redhat-user-workloads/gbenhaim-tenant/backplane-must-gather/backplane-must-gather-cr7q:482dbdea3bede804a1233f048e0e40c1c43bc38e" > $(results.IMAGE_URL.path)
+              echo -n "sha256:dbca4eb18f0786b3be506830c9a2e79d850053e792b0cd9f072a530e3f756bb9" > $(results.IMAGE_DIGEST.path)
+              echo -n "https://github.com/gbenhaim/backplane-must-gather" > $(results.url.path)
+              echo -n "482dbdea3bede804a1233f048e0e40c1c43bc38e" > $(results.commit.path)
     workspaces:
     - name: workspace
     - name: git-auth
