@@ -44,6 +44,15 @@ spec:
     tasks:
     - name: set-results
       taskSpec:
+        results:
+          - name: IMAGE_URL
+            description: ""
+          - name: IMAGE_DIGEST
+            description: ""
+          - name: url
+            description: ""
+          - name: commit
+            description: ""
         steps:
           - name: echo
             image: ubuntu
