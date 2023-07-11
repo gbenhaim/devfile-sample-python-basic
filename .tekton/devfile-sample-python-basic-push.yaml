@@ -367,7 +367,7 @@ spec:
         - name: revision
           value: main
         - name: pathInRepo
-          value: task/stackrox-image-scan/0.1
+          value: task/stackrox-image-scan/0.1/stackrox-image-scan.yaml
         resolver: git
       when:
       - input: $(params.skip-checks)
