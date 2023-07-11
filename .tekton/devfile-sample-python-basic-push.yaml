@@ -348,6 +348,34 @@ spec:
         operator: in
         values:
         - "false"
+    - name: acs-scan
+      params:
+      - name: image
+        value: $(tasks.build-container.results.IMAGE_URL)
+      - name: rox_central_endpoint
+        value: roxsecrets
+      - name: rox_api_token
+        value: roxsecrets
+      - name: output_format
+        value: pretty
+      runAfter:
+      - build-container
+      taskRef:
+        params:
+        - name: org
+          value: tektoncd
+        - name: repo
+          value: catalog
+        - name: revision
+          value: main
+        - name: pathInRepo
+          value: task/stackrox-image-scan/0.1
+        resolver: git
+      when:
+      - input: $(params.skip-checks)
+        operator: in
+        values:
+        - "false"
     - name: sast-snyk-check
       params:
       - name: SNYK_SECRET
