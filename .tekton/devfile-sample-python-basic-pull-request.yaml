@@ -360,7 +360,7 @@ spec:
       - name: rox_api_token
         value: roxsecrets
       - name: output_format
-        value: pretty
+        value: table
       runAfter:
       - build-container
       taskRef:
